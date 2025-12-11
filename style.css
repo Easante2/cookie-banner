@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
 }
 
-/* --- Privacy Policy Pop-up Styles --- */
 #privacyPolicyModal {
-  display: none; /* Hidden by default */
+  display: none; /* Ensure this is the only display property here */
   position: fixed;
   z-index: 999999;
   left: 0;
@@ -18,11 +16,20 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 
-  /* 🌟 Centering the modal using Flexbox 🌟 */
-  display: flex; /* Display is flex when shown by JS */
-  align-items: center; /* Vertically center items */
-  justify-content: center; /* Horizontally center items */
-  overflow-y: scroll; /* Allows scrolling the entire modal container if needed */
+  /* Remove display: flex; from here! */
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#privacyPolicyModal ul {
+  list-style: disc;
+  margin-left: 20px; /* indent bullets */
+  padding-left: 20px;
+}
+
+#privacyPolicyModal li {
+  margin-bottom: 6px; /* optional spacing */
 }
 
 .modal-content {
